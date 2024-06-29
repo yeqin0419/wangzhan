@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>童来同往</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 添加 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="项目Logo" class="logo">
+                <h1>童来同往</h1>
+            </div>
+            <nav>
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#activities" class="nav-link">活动介绍</a>
+                <a href="#donate" class="nav-link">捐赠平台</a>
+                <a href="#feedback" class="nav-link">爱心回馈</a>
+                <a href="#stories" class="nav-link">故事会</a>
+                <a href="#contact" class="nav-link">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="blur-overlay"></div> <!-- 添加模糊且透明的幕布 -->
+        <div class="home-content">
+            <div class="home-header">
+                <h2>欢迎来到童来同往</h2>
+                <button id="toggle-content">展开</button>
+            </div>
+            <p class="hidden-content">在数字化时代背景下，我们的“童来同往”旨在运用现代科技力量，构建一个高效、透明、可持续的教育支援生态系统，连接社会各界与偏远地区的教育资源，共同促进教育公平与乡村振兴。</p>
+            <a href="#activities" class="down-arrow"><i class="fas fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <section id="activities" class="content">
+        <div class="container">
+            <h2>活动介绍</h2>
+            <div class="activities-content">
+                <div class="activity">
+                    <h3>中国传媒大学“学前学会普通话”行动评估团队再向凉山行</h3>
+                    <p>经教育部语言文字应用研究所推荐，中国乡村发展志愿服务促进会再次委托我校播音主持艺术学院测评团队赴四川凉山彝族自治州开展2024年度“学前学会普通话”行动评估。</p>
+                    <img src="1.png" alt="凉山活动图片">
+                </div>
+                <div class="activity">
+                    <h3>中国传媒大学“童语同音”计划</h3>
+                    <p>圆满完成教育部西藏师资培训。</p>
+                    <img src="2.png" alt="西藏师资培训图片">
+                    <div class="btn-container">
+                        <a href="https://mp.weixin.qq.com/s/x73qZhBALoXMl4va9_4K6A" target="_blank" class="btn">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="content">
+        <div class="container">
+            <h2>捐赠平台</h2>
+            <p>我们公开发布经过分析的需求公告，配以当地风貌、学校实况的图片、视频资料，增强透明度与感染力，吸引更多关注。通过资源联络平台，提供一键联络方式，方便捐赠者直接参与，简化物资捐赠流程，加速资源对接。</p>
+            <div class="donate-content">
+                <div class="donate-method">
+                    <h3>捐赠通道</h3>
+                    <p>鼓励社会组织、企业和个人参与捐赠，服务队负责物资的运送与交接，确保每一份爱心都能准确送达教育局和学校。</p>
+                    <img src="3.png" alt="捐赠通道图片">
+                </div>
+                <div class="donate-method">
+                    <h3>一键联络</h3>
+                    <p>通过资源联络平台，提供一键联络方式，方便捐赠者直接参与，简化物资捐赠流程，加速资源对接。</p>
+                    <img src="4.png" alt="一键联络图片">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback" class="content">
+        <div class="container">
+            <h2>爱心回馈</h2>
+            <div class="feedback-content">
+                <div class="feedback-method">
+                    <h3>特色回馈</h3>
+                    <p>我们鼓励学校和孩子们以当地特色产品、手工艺品或艺术创作等形式回馈社会，这不仅是一种物质上的回赠，更是文化和情感的交流。</p>
+                    <div class="gift-images">
+                        <img src="凉山反馈礼物.jpg" alt="凉山反馈礼物" class="gift-image active">
+                        <img src="凉山反馈礼物2.jpg" alt="凉山反馈礼物2" class="gift-image">
+                        <img src="凉山反馈礼物3.jpg" alt="凉山反馈礼物3" class="gift-image">
+                        <img src="凉山反馈礼物4.jpg" alt="凉山反馈礼物4" class="gift-image">
+                        <img src="凉山反馈礼物5.jpg" alt="凉山反馈礼物5" class="gift-image">
+                        <img src="凉山反馈礼物6.jpg" alt="凉山反馈礼物6" class="gift-image">
+                        <div class="dots-container">
+                            <div class="dots">
+                                <span class="dot active" onclick="showGiftImage(0)"></span>
+                                <span class="dot" onclick="showGiftImage(1)"></span>
+                                <span class="dot" onclick="showGiftImage(2)"></span>
+                                <span class="dot" onclick="showGiftImage(3)"></span>
+                                <span class="dot" onclick="showGiftImage(4)"></span>
+                                <span class="dot" onclick="showGiftImage(5)"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-method">
+                    <h3>回馈平台运营</h3>
+                    <p>设立专门平台展示并销售孩子们的回馈作品，所得盈利全部用于支持当地学校的持续发展，形成“资助—回馈—再资助”的良性循环。</p>
+                    <img src="6.png" alt="回馈平台运营图片">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="stories" class="content">
+        <div class="container">
+            <h2>年度爱心故事会</h2>
+            <div class="story-tabs">
+                <button class="tab-link active" onclick="showTab(event, 'dreams')">凉山孩子的梦想</button>
+                <button class="tab-link" onclick="showTab(event, 'reports')">相关报道</button>
+            </div>
+            <div id="dreams" class="tab-content active">
+                <div class="dreams-content">
+                    <div class="story-images">
+                        <img src="凉山孩子的梦想.jpg" alt="凉山孩子的梦想" class="story-image active">
+                        <img src="凉山孩子的梦想2.jpg" alt="凉山孩子的梦想2" class="story-image">
+                        <img src="凉山孩子的梦想3.jpg" alt="凉山孩子的梦想3" class="story-image">
+                        <img src="凉山孩子的梦想4.jpg" alt="凉山孩子的梦想4" class="story-image">
+                        <img src="凉山孩子的梦想5.jpg" alt="凉山孩子的梦想5" class="story-image">
+                        <img src="凉山孩子的梦想6.jpg" alt="凉山孩子的梦想6" class="story-image">
+                        <img src="凉山孩子的梦想7.jpg" alt="凉山孩子的梦想7" class="story-image">
+                        <img src="凉山孩子的梦想8.jpg" alt="凉山孩子的梦想8" class="story-image">
+                        <img src="凉山孩子的梦想9.jpg" alt="凉山孩子的梦想9" class="story-image">
+                        <img src="凉山孩子的梦想10.jpg" alt="凉山孩子的梦想10" class="story-image">
+                        <img src="凉山孩子的梦想11.jpg" alt="凉山孩子的梦想11" class="story-image">
+                        <img src="凉山孩子的梦想12.jpg" alt="凉山孩子的梦想12" class="story-image">
+                        <img src="凉山孩子的梦想13.jpg" alt="凉山孩子的梦想13" class="story-image">
+                        <img src="凉山孩子的梦想14.jpg" alt="凉山孩子的梦想14" class="story-image">
+                        <div class="dots-container">
+                            <div class="dots">
+                                <span class="dot active" onclick="showImage(0)"></span>
+                                <span class="dot" onclick="showImage(1)"></span>
+                                <span class="dot" onclick="showImage(2)"></span>
+                                <span class="dot" onclick="showImage(3)"></span>
+                                <span class="dot" onclick="showImage(4)"></span>
+                                <span class="dot" onclick="showImage(5)"></span>
+                                <span class="dot" onclick="showImage(6)"></span>
+                                <span class="dot" onclick="showImage(7)"></span>
+                                <span class="dot" onclick="showImage(8)"></span>
+                                <span class="dot" onclick="showImage(9)"></span>
+                                <span class="dot" onclick="showImage(10)"></span>
+                                <span class="dot" onclick="showImage(11)"></span>
+                                <span class="dot" onclick="showImage(12)"></span>
+                                <span class="dot" onclick="showImage(13)"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="reports" class="tab-content">
+                <div class="story-method">
+                    <h3>相关报道</h3>
+                    <ul>
+                        <li><a href="http://www.moe.gov.cn/" target="_blank">四川小凉山彝区开展“学前学会普通话”行动试点 - 中华人民共和国教育部政府门户网站</a></li>
+                        <li><a href="http://www.sc.gov.cn/" target="_blank">“学前学会普通话”行动成效明显 彝家孩子的世界变大了- 四川省人民政府网站</a></li>
+                        <li><a href="https://www.thepaper.cn/" target="_blank">“学前学普”，在凉山开出最美花蕾_澎湃号·政务_澎湃新闻-The Paper</a></li>
+                        <li><a href="https://www.163.com/" target="_blank">“学前学普”从“破题”到“深耕”|学前教育|教学|幼教点_网易订阅 (163.com)</a></li>
+                    </ul>
+                    <h3>爱心故事会</h3>
+                    <p>每半年或每年，我们将举办“爱心故事会”，邀请播音主持专业的志愿者讲述这一年来发生的感人故事，通过现场活动、线上直播等形式，广泛传播爱心事迹，增强社会影响力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="content">
+        <div class="container">
+            <h2>联系我们</h2>
+            <div class="contact-content">
+                <p>如果您有任何问题或想参与我们的项目，请通过以下方式联系我们：</p>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="您的姓名" required>
+                    <input type="email" name="email" placeholder="您的邮箱" required>
+                    <textarea name="message" placeholder="您的留言" required></textarea>
+                    <button type="submit" class="btn">发送信息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 智慧助学·爱的循环计划. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const content = document.querySelector('.hidden-content');
+            content.style.display = 'none';
+
+            document.getElementById('toggle-content').addEventListener('click', function () {
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                    this.textContent = '收起';
+                } else {
+                    content.style.display = 'none';
+                    this.textContent = '展开';
+                }
+            });
+
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 70; // Offset for fixed header
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // 平滑滚动
+            document.querySelector('.down-arrow').addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector('#activities').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        function showImage(index) {
+            const images = document.querySelectorAll('.story-image');
+            const dots = document.querySelectorAll('.dot');
+
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                dots[i].classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                    dots[i].classList.add('active');
+                }
+            });
+        }
+
+        function showGiftImage(index) {
+            const images = document.querySelectorAll('.gift-image');
+            const dots = document.querySelectorAll('.dot');
+
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                dots[i].classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                    dots[i].classList.add('active');
+                }
+            });
+        }
+
+        function showTab(evt, tabName) {
+            const tabContent = document.querySelectorAll('.tab-content');
+            const tabLinks = document.querySelectorAll('.tab-link');
+
+            tabContent.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            tabLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

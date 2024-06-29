@@ -1,0 +1,351 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s, padding 0.3s;
+}
+
+    header.sticky {
+        background: rgba(255, 255, 255, 1);
+        padding: 0.5em 0;
+    }
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+    nav a {
+        color: #ff0000;
+        text-decoration: none;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 5px;
+        transition: background 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        nav a.active {
+            background: #666666; /* 变成灰色背景 */
+            color: #fff; /* 变成白色字体 */
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+h1 {
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+#home {
+    background: url('cover_image.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1; /* 确保它在背景图片上 */
+}
+
+.home-content {
+    position: relative;
+    z-index: 2; /* 确保它在模糊层上 */
+    padding: 20px;
+}
+
+.home-header {
+    display: flex;
+    align-items: baseline; /* 确保底部对齐 */
+    justify-content: center; /* 将项目居中对齐 */
+    margin-bottom: 300px; /* 调整与箭头之间的距离 */
+}
+
+    .home-header h2 {
+        margin: 0 10px;
+        font-size: 3em; /* 调整字体大小 */
+        font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* 使用圆润字体 */
+    }
+
+.hidden-content {
+    display: none;
+    margin-top: 10px; /* 添加顶部间距 */
+}
+
+#toggle-content {
+    background: transparent;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 3px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+    box-shadow: none;
+    font-size: 0.8em;
+    margin-left: 10px; /* 添加左边距 */
+}
+
+    #toggle-content:hover {
+        background: transparent;
+        color: #fff;
+        box-shadow: none;
+    }
+
+.down-arrow {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 2em; /* 调整字体大小以匹配箭头大小 */
+    color: #fff;
+    background: rgba(255, 0, 0, 0.8);
+    padding: 10px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+    .down-arrow:hover {
+        background: rgba(255, 0, 0, 1);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+#home h2 {
+    font-size: 3em;
+    margin: 0; /* 去除多余的顶部和底部边距 */
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* 使用圆润字体 */
+}
+
+.content {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 70%; /* 改为 70% */
+    margin: 0 auto; /* 居中 */
+    padding: 20px;
+}
+
+.activities-content, .donate-content, .feedback-content, .stories-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.activity, .donate-method, .feedback-method, .story-method {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+    .activity img, .donate-method img, .feedback-method img, .story-method img {
+        width: 100%; /* 确保图片填充容器 */
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover; /* 确保图片内容不变形 */
+    }
+
+    .activity h3, .donate-method h3, .feedback-method h3, .story-method h3 {
+        margin-top: 0;
+        display: inline-block; /* 使标题和按钮在一行 */
+    }
+
+    .activity p, .donate-method p, .feedback-method p, .story-method p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .activity .btn-container {
+        display: inline-block;
+        margin-left: 10px; /* 调整按钮与标题的间距 */
+        vertical-align: middle; /* 垂直居中对齐 */
+    }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+    .btn:hover {
+        background: #0056b3;
+    }
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+}
+
+
+.story-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tab-link {
+    padding: 10px 20px;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+    .tab-link.active {
+        background: #666666; /* 变成灰色背景 */
+        color: #fff; /* 变成白色字体 */
+    }
+
+    .tab-link:hover {
+        background: #ddd;
+    }
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+.story-images, .gift-images {
+    position: relative;
+    width: 100%;
+    height: 800px; /* 根据需要调整高度 */
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.story-image, .gift-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保图片填充容器 */
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+    .story-image.active, .gift-image.active {
+        opacity: 1;
+    }
+
+
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5); /* 添加深色背景 */
+    padding: 5px 20px;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .dot.active,
+    .dot:hover {
+        background: #ff0000;
+    }
+
+.dreams-content {
+    margin-top: 20px;
+    width: 70%;
+    margin: 0 auto; /* 居中对齐 */
+}
+
+#stories {
+    min-height: 800px; /* 增加容器的纵向长度 */
+}
